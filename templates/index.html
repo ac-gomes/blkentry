@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bulk load data</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="{{ url_for('static', path='/styles.css') }}" rel="stylesheet">
+</head>
+<body>
+  <div class="app">
+    <section class="sections left-section">
+      <H1 >Bulk your csv files <br> and enjoy a friendly data platform</H1>
+      <img src="{{ url_for('static', path='/server-animate.svg') }}" class="server-animate" alt="Cloud-Server">
+    </section>
+    <section class="sections right-section">
+      <div class="card-input">
+        <h1>LOAD YOUR FILE HERE</h1>
+        <div class="textfield">
+          <label for="conn">Connection String</label>
+          <input type="text" name="conn-str" id="conn-str" placeholder="{User:user, Password:pass,Host: hostname,Port; 5432}">
+        </div>
+        <div class="textfield">
+          <label for="database">Database Name</label>
+          <input type="text" name="database" id="database-name" placeholder="Database">
+        </div>
+        <div class="textfield">
+          <label for="table">Table Name</label>
+          <input type="text" name="table" id="table-name" placeholder="Table Name">
+        </div>
+        <div class="textfield">
+          <label for="file-path">File Path</label>
+          <div class="textfield-input">
+            <input type="text" name="file-path" id="path" placeholder="C:\myfile.csv">
+            <i class="material-icons align-folder" style="font-size:36px;color:rgb(146, 227, 169)">folder_open</i>
+          </div>
+        </div>
+        <label class="msg-error" id="msg-error-id">remove this, put as none in css</label>
+        <button class="btn-send" id="btn-send-file">Send File</button>
+      </div>
+    </section>
+
+  </div>
+</body>
+</html>

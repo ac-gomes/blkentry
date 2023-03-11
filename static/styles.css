@@ -1,0 +1,172 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap'); */
+
+*{
+  margin:0;
+  padding: 0;
+  box-sizing: border-box;
+}
+ul, ol, li{
+  list-style: none;
+}
+
+.app{
+  width: 100vw;
+  height: 100vh;
+  background: #223238;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.left-section{
+  width: 50vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.left-section > h1{
+  color: #ffff;
+}
+.right-section{
+  width: 50vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.server-animate{
+  width: 35vw;
+}
+.card-input{
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 30px 35px;
+  background: #92E3A9;
+  border-radius: 15px;
+  box-shadow: 0px 10px 40px #0000;
+}
+.card-input >h1{
+  color: #223238;
+  font-weight: 800;
+  margin: 0;
+}
+.textfield{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  margin-top: 10px;
+}
+.textfield >input{
+  width: 100%;
+  border: none;
+  border-radius: 10px;
+  padding: 15px;
+  background: #fdf6f6;
+  color: #223238;
+  font-size: 12pt;
+  box-shadow: #223238;
+  outline:none ;
+  box-sizing: border-box;
+}
+.textfield > label{
+  color: #223238 ;
+  margin-bottom: 10px;
+}
+.textfield > input::placeholder{
+  color: #a6a6a6
+}
+.textfield-input {
+  display: flex;
+  width: 100%;
+  border-radius: 10px;
+  background: #223238;
+  flex-direction: row;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.textfield-input >input{
+  width: 100%;
+  border-bottom-left-radius: 10px;
+  border-top-left-radius: 10px;
+  border: none;
+  padding: 15px;
+  background: #fdf6f6;
+  color: #223238 ;
+  font-size: 12pt;
+  box-shadow: #0000;
+  outline:none ;
+  box-sizing: border-box;
+}
+
+.textfield-input >label{
+  color: #223238 ;
+  margin-bottom: 10px;
+}
+.textfield-input > input::placeholder{
+  color: #a6a6a6
+}
+.msg-error{
+  margin-top: 10px;
+  margin-bottom: 10px;
+  text-align: start;
+  display: flex;
+  color: rgb(255, 0, 55) !important;
+}
+
+.align-folder {
+  position: relative;
+  cursor: pointer;
+ }
+
+.btn-send{
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 5px;
+  border: none;
+  border-radius: 8px;
+  outline: none;
+  text-transform: uppercase;
+  font-weight: 800;
+  letter-spacing: 2px;
+  background: #223238;
+  color: #92E3A9;
+  cursor: pointer;
+  box-shadow: 0px 10px 10px -12px #223238;
+}
+
+@media only screen and (max-width: 950px){
+  .card-input{
+    width: 85%;
+  }
+}
+
+@media only screen and (max-width: 600px){
+  .app{
+    flex-direction: column;
+  }
+
+  .left-section> h1{
+    display: none;
+  }
+
+  .left-section{
+    width: 100%;
+    height: auto;
+  }
+
+  .right-section {
+    width: 90%;
+    height: auto;
+  }
+
+  .server-animate{
+    width: 40vh;
+  }
+}
