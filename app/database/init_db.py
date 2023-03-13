@@ -1,6 +1,6 @@
 from asyncio import run
 
-from models import Base
+from model_service import Base
 from connection import engine
 
 
