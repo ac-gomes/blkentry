@@ -13,7 +13,7 @@ log_router = APIRouter(prefix='/log', tags=['log'])
 @log_router.post('/create', response_model= DefaultOutput, responses={400: {'model': ErrorOutput}})
 async def create_activity(log_input: LogActivityInput):
     try:
-        await LogService.create_log(file_name=log_input.file_name, target_db=log_input.target_db)
+        await LogService.create_log(file_name=log_input.file_name, target_table=log_input.target_table)
         return DefaultOutput(message='logged activity successfully!')
     except Exception as error:
         raise HTTPException(400, detail=str(error))
@@ -22,10 +22,10 @@ async def create_activity(log_input: LogActivityInput):
 @log_router.post('/create/tablelog', response_model= DefaultOutput, responses={400: {'model': ErrorOutput}})
 async def log_data_wherehouse(table_log_input: DwTableLog):
     try:
-        await TableLogService.create_table_log(file_id=table_log_input.file_id, table_name=table_log_input.table_name)
+        await TableLogService.create_table_log(file_id=table_log_input.file_id, target_db=table_log_input.target_db)
         return DefaultOutput(message='logged activity successfully!')
     except Exception as error:
-        raise HTTPException(400, detail='logged activity successfully!')
+        raise HTTPException(400, detail=str(error))
 
 
 @log_router.get('/list', response_model=List[LogListOutput], responses={400: {'model': ErrorOutput}})

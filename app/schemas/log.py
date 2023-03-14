@@ -4,7 +4,7 @@ from typing import List
 
 class LogActivityInput(BaseModel):
     file_name: str
-    target_db: str
+    target_table: str
 
 
 class DefaultOutput(BaseModel):
@@ -17,19 +17,23 @@ class ErrorOutput(BaseModel):
 
 class DwTableLog(BaseModel):
     file_id: int
-    table_name: str
+    target_db: str
 
 
 class DataWarehouse(BaseModel):
+    id: int
+    target_db: str
     file_id: int
-    table_name: str
-    created_dt: str
+
+    class Config:
+        orm_mode = True
 
 
 class LogListOutput(BaseModel):
     id: int
     file_name: str
-    data_warehouse: List[DataWarehouse]
+    target_table: str
+    databases: List[DataWarehouse]
 
     class Config:
         orm_mode = True
