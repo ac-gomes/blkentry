@@ -6,3 +6,7 @@ class DefaultOutput(BaseModel):
 
 class ErrorOutput(BaseModel):
     detail: str
+
+
+class StandardOutput(BaseModel):
+    message: dict
