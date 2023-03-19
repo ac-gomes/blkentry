@@ -5,6 +5,7 @@ from fastapi.templating import Jinja2Templates
 
 
 from app.routers.log import log_router
+from app.routers.file import file_router
 
 
 app = FastAPI()
@@ -13,10 +14,10 @@ app.mount("/static", StaticFiles(directory="static"), name="static")
 screen = Jinja2Templates(directory="templates")
 
 app.include_router(log_router)
-# app.include_router(file)
+app.include_router(file_router)
 
 
-@app.get('/index/', response_class=HTMLResponse)
+@app.get('/', response_class=HTMLResponse)
 def index(request: Request):
     context = {'request': request}
     return screen.TemplateResponse("index.html", context)

@@ -2,8 +2,9 @@ from typing import List
 
 from fastapi import APIRouter, HTTPException
 
+from ..schemas.utils import DefaultOutput, ErrorOutput
 from ..schemas.log import (
-    LogActivityInput, DefaultOutput, ErrorOutput, LogListOutput, DwTableLog
+    LogActivityInput,  LogListOutput, DwTableLog
 )
 from ..services.log_service import LogService, TableLogService
 
