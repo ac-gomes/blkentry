@@ -1,5 +1,5 @@
+from fastapi import Form, File, UploadFile
 from pydantic import BaseModel
-from typing import List
 
 #Use this to input file name into log table
 class UploadSingleFile(BaseModel):
@@ -12,3 +12,24 @@ class FileTableFileds(BaseModel):
     category = str
     sub_category= str
     created_dt = str
+
+class UploadForm(BaseModel):
+        database: str
+        table: str
+        file: UploadFile
+
+
+        @classmethod
+        def from_form(
+            cls,
+            database: str = Form(...),
+            table: str = Form(...),
+            file: UploadFile = File(...)
+        ):
+            return cls (
+            database = database,
+            table = table,
+            file = file
+
+            )
+

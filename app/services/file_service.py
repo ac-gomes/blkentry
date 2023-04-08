@@ -19,10 +19,10 @@ class FileService:
                   for row in reader:
                     chunks.append(FileTableModel(product_brand=row[0], category=row[1], sub_category=row[2]))
                     if len(chunks) == 100:
-                      session.add_all(chunks) #remove o await
+                      session.add_all(chunks)
                       chunks.clear()
                     if chunks:
-                      session.add_all(chunks) #remove o await
+                      session.add_all(chunks)
                       await session.commit()
         return {"filename": file.filename, "success": True}
 
