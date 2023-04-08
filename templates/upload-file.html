@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bulk load data</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="{{ url_for('static', path='/styles.css') }}" rel="stylesheet">
+  </head>
+  <body>
+    <div class="app">
+      <section class="sections left-section">
+        <H1 >Bulk your csv files <br> and enjoy a friendly data platform</H1>
+        <img src="{{ url_for('static', path='/server-animate.svg') }}" class="server-animate" alt="Cloud-Server">
+      </section>
+      <section class="sections right-section">
+        <div class="card-input">
+          <h1>LOAD YOUR FILE HERE</h1>
+          <form method="POST" enctype="multipart/form-data" class="textfield" >
+            <label for="database" class="lb">Database:</label>
+            <input type="text" id="database" name="database" placeholder="Database"><br>
+            <label for="table" class="lb">Table:</label>
+            <input type="text" id="table-name" name="Table" placeholder="Table Name"><br>
+            <input type="file" name="file" class="file"><br>
+            <input type="submit" value="Submit" class="btn-send">
+          </form>
+      </div>
+      </section>
+    </div>
+  </body>
+</html>

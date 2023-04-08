@@ -35,6 +35,11 @@ ul, ol, li{
   justify-content: center;
   align-items: center;
 }
+.card-input > h1{
+  margin-bottom: 20px !important;
+  color: #ffff;
+}
+
 .server-animate{
   width: 35vw;
 }
@@ -49,96 +54,42 @@ ul, ol, li{
   border-radius: 15px;
   box-shadow: 0px 10px 40px #0000;
 }
+.textfield >input {
+  width: 100%;
+  border: none;
+  border-radius: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 15px;
+  color: #223238;
+  font-size: 12pt;
+  box-shadow: #223238;
+  outline: none;
+  box-sizing: border-box;
+}
+.textfield >label {
+  color: #223238;
+  font-size: 12pt;
+  font-weight: 800;
+}
 .card-input >h1{
   color: #223238;
   font-weight: 800;
   margin: 0;
 }
-.textfield{
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-  margin-top: 10px;
+.file {
+  margin-top: 0 !important;
+  margin-bottom:0 !important;
+  padding-left: 0 !important;
 }
-.textfield >input{
-  width: 100%;
-  border: none;
-  border-radius: 10px;
-  padding: 15px;
-  background: #fdf6f6;
-  color: #223238;
+.btn-send{
+  color: #ffff !important;
   font-size: 12pt;
-  box-shadow: #223238;
-  outline:none ;
-  box-sizing: border-box;
+  background: #223238;
 }
-.textfield > label{
-  color: #223238 ;
-  margin-bottom: 10px;
-}
+
 .textfield > input::placeholder{
   color: #a6a6a6
-}
-.textfield-input {
-  display: flex;
-  width: 100%;
-  border-radius: 10px;
-  background: #223238;
-  flex-direction: row;
-  align-items: center;
-  box-sizing: border-box;
-}
-
-.textfield-input >input{
-  width: 100%;
-  border-bottom-left-radius: 10px;
-  border-top-left-radius: 10px;
-  border: none;
-  padding: 15px;
-  background: #fdf6f6;
-  color: #223238 ;
-  font-size: 12pt;
-  box-shadow: #0000;
-  outline:none ;
-  box-sizing: border-box;
-}
-
-.textfield-input >label{
-  color: #223238 ;
-  margin-bottom: 10px;
-}
-.textfield-input > input::placeholder{
-  color: #a6a6a6
-}
-.msg-error{
-  margin-top: 10px;
-  margin-bottom: 10px;
-  text-align: start;
-  display: flex;
-  color: rgb(255, 0, 55) !important;
-}
-
-.align-folder {
-  position: relative;
-  cursor: pointer;
- }
-
-.btn-send{
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 5px;
-  border: none;
-  border-radius: 8px;
-  outline: none;
-  text-transform: uppercase;
-  font-weight: 800;
-  letter-spacing: 2px;
-  background: #223238;
-  color: #92E3A9;
-  cursor: pointer;
-  box-shadow: 0px 10px 10px -12px #223238;
 }
 
 @media only screen and (max-width: 950px){
